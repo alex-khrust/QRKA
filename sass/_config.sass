@@ -1,0 +1,110 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 14px // Body Font Size
+// $textcolor: #333 // Text Color
+$lineheight: 1.5 // Document Line Height
+// $userfont: roboto-oh5, sans-serif // User Font Family
+$userfont: Inter, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$txt-white: #fff
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 28px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import '../libs/bootstrap-5.2.0-beta1/scss/bootstrap-reboot' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import url(https://unpkg.com/swiper/swiper-bundle.min.css) // Swiper slider
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Playfair+Display:wght@400;600;700&family=Hind:wght@700&display=swap')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #{var(--color-txt)}
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html
+	width: 100%
+
+body
+	width: 100%
+	min-width: 320px
+	position: relative
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	background: #{var(--background-body)}
+	color: #{var(--color-txt)}
+	overflow-x: hidden
+	position: relative
+
+	.container
+		width: 100%
+		max-width: 375px
+		height: auto
+		padding: 0 14px
+		margin: 0 auto
+		display: grid
+		justify-content: center
+		gap: 24px
+
+h1,h2,h3,h4,h5,h6
+	margin-bottom: 0
+
+h1,h2,h3,h4,h5,h6,
+span, button
+	font-family: Playfair Display, sans-serif
+	font-weight: 700
+	color: #{var(--color-tit)}
+
+button,
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	font-family: 'Playfair Display'
+	font-size: 18px
+	font-weight: 700
+	line-height: 1
+	color: #{var(--color-btn)}
+	background: #{var(--background-btn)}
+	border-radius: 10px
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+	outline: none
+
+a
+	text-decoration: none
+	transition: .3s
+	&:hover
+		color: #{var(--background-btn)}

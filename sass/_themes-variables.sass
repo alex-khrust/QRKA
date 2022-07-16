@@ -1,0 +1,34 @@
+.theme
+  &-dark
+    --background-body: rgba(40, 43, 43, 1)
+    --color-tit: rgba(254, 232, 158, 1)
+    --color-txt: rgb(169, 169, 169)
+    --background-card: #1C1F1D
+    --shadow-card: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.46))
+    --background-btn: rgba(254, 232, 158, 1)
+    --color-btn: #000
+
+  &-white
+    --background-body: #FFF
+    --color-tit: #000
+    --color-txt: #7B7B7B
+    --background-card: #FFF
+    --shadow-card: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.46))
+    --background-btn: #3479FF
+    --color-btn: #fff
+    .btn
+      border-radius: 100px
+    .text-white
+      color: #{var(--color-tit)} !important
+      .biography-info-link
+        color: #{var(--background-btn)} !important
+    .star svg path
+      fill: #{var(--background-btn)} !important
+    .contacts__address
+      color: #{var(--color-tit)} !important
+    .accordion__title
+      color: #{var(--color-btn)} !important
+
+
+
+

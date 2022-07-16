@@ -1,0 +1,426 @@
+.card
+  width: 100%
+  height: auto
+  padding: 10px 12px 20px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 16px
+  background: #{var(--background-card)}
+  filter: #{var(--shadow-card)}
+  border-radius: 10px
+
+  img
+    width: 100%
+    height: auto
+    object-fit: cover
+    border-radius: 10px
+    overflow: hidden
+
+  h2,h3,h4,h5,h6
+    font-weight: 700
+    font-size: 24px
+    line-height: 32px
+  p
+    margin: 0
+    span
+      font-family: !important
+      color: #fff
+      font-weight: 800
+
+.advantages
+  padding: 20px 0
+  display: grid
+  align-items: center
+  justify-content: center
+  flex-flow: row wrap
+  grid-auto-flow: column
+  gap: 36px
+  position: relative
+  overflow: hidden
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    width: 75px
+    height: 75px
+    border: 9px solid #{var(--background-btn)}
+    border-radius: 50%
+  &:before
+    left: -38px
+    top: -34px
+  &:after
+    right: -31px
+    bottom: -48px
+
+  &__years,
+  &__clients,
+  &__awards
+    width: auto
+    display: grid
+    justify-items: center
+    gap: 5px
+
+  &-number
+    width: 46px
+    height: 46px
+    border: 2px solid #{var(--background-btn)}
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-grow: 1
+    color: #{var(--background-btn)}
+    font-family: Playfair Display, sans-serif
+    font-weight: 700
+    .advantages-plus
+      color: #{var(--background-btn)}
+      font-size: 12px
+  &-name
+    font-size: 12px
+    line-height: 1
+
+  &__years
+    .advantages-number
+      font-size: 36px
+      line-height: 1
+      align-items: flex-end
+      padding-bottom: 11px
+  &__clients
+    .advantages-number
+      font-size: 18px
+  &__awards
+    .advantages-number
+      font-size: 18px
+
+.consultation,
+.biography
+  &-btn
+    width: 109px
+    height: 33px
+    padding: 10px 22px
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    gap: 10px
+    flex-grow: 0
+    font-size: 12px
+    font-family: Playfair Display, sans-serif
+    font-weight: 600
+
+.case
+  &-video
+    width: 100%
+    height: 0
+    padding-bottom: 56.25% /* 16:9 */
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+  &-link
+    font-size: 14px
+    font-weight: 600
+    color: #{var(--color-tit)}
+
+.review-one,
+.review-two
+  padding-top: 58px
+  margin-top: 31px
+  position: relative
+  .star
+    width: 86px
+    height: 82px
+    position: absolute
+    top: -31px
+    left: 50%
+    transform: translateX(-50%)
+    svg path
+      fill: #{var(--color-tit)}
+    &:after
+      content: '5'
+      position: absolute
+      top: 45%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-family: 'Playfair Display'
+      font-weight: 600
+      font-size: 42px
+      line-height: 1
+      color: #{var(--color-btn)}
+  .review-text
+    text-align: center
+  .client
+    width: 100%
+    height: auto
+    display: grid
+    grid-template-areas: 'client-photo client-name' 'client-photo client-user'
+    gap: 4px 12px
+    justify-content: start
+    align-items: center
+    margin-left: 21px
+    &-photo
+      width: 63px
+      height: 63px
+      object-fit: contain
+      border-radius: 50%
+      overflow: hidden
+      grid-area: client-photo
+    &-name
+      grid-area: client-name
+      align-self: end
+      font-size: 16px
+    &-user
+      grid-area: client-user
+      align-self: start
+
+.reviews-more,
+.ask
+  padding: 20px 12px
+  &-btn
+    width: 100%
+    height: 59px
+
+.biography
+  ul
+    padding-left: 0
+    margin: 0
+    list-style-type: none
+  li
+
+.education,
+.additional-education,
+.skills
+  width: 100%
+  display: grid
+  gap: 16px
+
+.education
+  &-title
+  &__list
+  &__item
+
+.additional-education
+  &-title
+  &__list
+  &__item
+    display: inline
+    background: rgba(254, 232, 158, 0.2)
+
+.skills
+  &-title
+  &__list
+  &__item
+
+.biography-info
+  &__list
+  &__item
+    display: flex
+    align-items: baseline
+    gap: 10px
+  &-subject
+  &-link
+    color: #fff
+
+.text-white
+  color: #fff
+
+.faq
+
+.accordion
+  width: 100%
+  height: auto
+  padding: 0
+  margin: 0
+  list-style: none
+  display: grid
+  gap: 16px
+  &__item
+    width: 100%
+    height: auto
+    min-height: 56px
+    padding: 17px 16px
+    display: grid
+    align-items: center
+    color: #{var(--color-btn)}
+    background: #{var(--background-btn)}
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+    border-radius: 10px
+    transition: 0.3s
+    position: relative
+    &:after
+      content: '+'
+      width: 22px
+      height: 22px
+      position: absolute
+      top: 17px
+      right: 16px
+      background: var(--background-card)
+      color: var(--color-tit)
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 19px
+      border-radius: 4px
+      transition: 0.3s
+    &.active
+      gap: 10px
+      &:after
+        content: '-'
+      .accordion
+        &__content
+          height: auto
+          transform: scaleY(1)
+          opacity: 1
+
+  &__title
+    padding-right: 40px
+    font-family: Playfair Display
+    font-size: 14px !important
+    line-height: 19px !important
+    color: #000
+
+  &__content
+    height: 0
+    opacity: 0
+    margin: 0
+    font-size: 10px !important
+    font-weight: 500 !important
+    line-height: 1.5 !important
+    overflow: hidden
+    transform: scaleY(0)
+    transition: 0.3s
+
+  &__content-text
+
+.contacts
+  padding-top: 20px
+  position: relative
+  &-title
+    line-height: 1
+  .socials
+    position: absolute
+    top: 25px
+    right: 12px
+    display: flex
+    gap: 12px
+    &__link
+
+  &__list
+    width: 100%
+    display: grid
+    gap: 12px 0
+  &__link
+    width: 100%
+    height: auto
+    display: grid
+    justify-content: start
+    align-items: start
+    grid-template-areas: 'icon name' 'icon address'
+    gap: 0 12px
+    text-decoration: none
+    transition: .3s
+    &:hover .contacts__address
+      color: #{var(--color-tit)}
+  &__icon
+    grid-area: icon
+  &__name
+    grid-area: name
+    align-self: end
+    font-weight: 500
+    font-size: 14px
+    color: #{var(--color-txt)}
+  &__address
+    grid-area: address
+    align-self: start
+    font-family: 'Playfair Display'
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    color: #fff
+
+  &__callback-form
+    width: 100%
+    display: grid
+    gap: 16px 0
+
+.callback
+  &-title
+  &-form
+    width: 100%
+    display: grid
+    gap: 16px 0
+    &__label
+      width: 100%
+      display: grid
+      gap: 4px 0
+    .label-title
+      margin-left: 18px
+
+  &-form-submit
+    width: 100%
+    height: 59px
+    margin-top: 8px
+  .name
+    &-input
+
+  .phone
+    &-input
+
+input
+  width: 100%
+  height: 49px
+  padding: 14px 18px
+  font-size: 14px
+  color: #{var(--color-txt)}
+  background: #{var(--background-body)}
+  border: none
+  border-radius: 10px
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+::placeholder
+  color: #{var(--color-txt)}
+
+.subscription
+  width: 100%
+  display: flex
+  justify-content: center
+  gap: 14px
+  &-smile
+    width: 25px !important
+    height: 25px !important
+
+  &-text
+    width: 200px
+    font-size: 14px
+
+.biography-slider
+  width: 100%
+  height: auto
+  max-width: 300px
+  margin: 0 auto
+  display: flex
+  position: relative
+  overflow: hidden
+.swiper
+  width: 100%
+  height: auto
+  object-fit: cover
+  padding-bottom: 18px
+
+.swiper-pagination
+  bottom: -5px !important
+  &-bullet
+    width: 54px
+    height: 2px
+    background: #{var(--color-tit)}
+    opacity: 0.5
+    border-radius: 10px
+    &-active
+      background: #{var(--color-tit)}
+      opacity: 1
+
+
