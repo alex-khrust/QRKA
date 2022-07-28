@@ -28,6 +28,21 @@
       color: #fff
       font-weight: 800
 
+  &-list
+    padding-left: 26px !important
+    margin: 0
+    &__item
+      color: #{var(--color-tit)}
+      font-weight: 700
+
+  b, .bold
+    color: #{var(--color-tit)}
+    font-weight: 700
+  strong, .strong
+    display: inline
+    font-weight: 500
+    background: rgba(130, 255, 4, 0.22)
+
 .advantages
   padding: 20px 0
   display: grid
@@ -93,6 +108,29 @@
     .advantages-number
       font-size: 18px
 
+.sale
+  width: 77px
+  height: 77px
+  display: grid
+  align-content: center
+  justify-content: center
+  gap: 3px
+  font-size: 7px
+  line-height: 1
+  background: #{var(--background-btn)}
+  color: #{var(--color-btn)}
+  border-radius: 50%
+  overflow: hidden
+  position: absolute
+  right: 12px
+  top: 180px
+  span
+    font-weight: 700
+    font-size: 23px
+    line-height: 1
+    color: #{var(--color-btn)}
+
+.card,
 .consultation,
 .biography
   &-btn
@@ -132,6 +170,12 @@
   padding-top: 58px
   margin-top: 31px
   position: relative
+  .stars
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
   .star
     width: 86px
     height: 82px
@@ -154,36 +198,76 @@
       color: #{var(--color-btn)}
   .review-text
     text-align: center
-  .client
-    width: 100%
-    height: auto
-    display: grid
-    grid-template-areas: 'client-photo client-name' 'client-photo client-user'
-    gap: 4px 12px
-    justify-content: start
-    align-items: center
-    margin-left: 21px
-    &-photo
-      width: 63px
-      height: 63px
-      object-fit: contain
-      border-radius: 50%
-      overflow: hidden
-      grid-area: client-photo
-    &-name
-      grid-area: client-name
-      align-self: end
-      font-size: 16px
-    &-user
-      grid-area: client-user
-      align-self: start
 
+.client
+  width: 100%
+  height: auto
+  display: grid
+  grid-template-areas: 'client-photo client-name' 'client-photo client-user'
+  gap: 4px 12px
+  justify-content: start
+  align-items: center
+  margin-left: 21px
+  &-photo
+    width: 63px
+    height: 63px
+    object-fit: contain
+    border-radius: 50%
+    overflow: hidden
+    grid-area: client-photo
+  &-name
+    grid-area: client-name
+    align-self: end
+    font-size: 16px
+  &-user
+    grid-area: client-user
+    align-self: start
+
+.reviews-one,
+.reviews-two
+  margin: 0
+  padding-top: 10px
+  align-items: center
+  .client
+    width: auto
+    margin: 0
+    &-name
+      font-weight: 600
+      font-size: 24px
+  .review-text
+    max-width: 260px
+    font-weight: 400
+    line-height: 21px
+    text-align: center
+    letter-spacing: 0.02em
+    color: #{var(--color-tit)}
+
+.reviews-more.v-2
+  padding: 20px 50px 20px
+  display: grid
+  align-content: center
+  justify-items: center
+  text-align: center
+  .review-image
+    width: 170px
+    height: 58px
+    object-fit: cover
+    margin-bottom: -6px
+  .card-title
+    line-height: 29px
+  .btn
+    width: 142px
+    height: 38px
+    font-size: 14px
+    font-weight: 700
+
+.review-more,
 .reviews-more,
 .ask
   padding: 20px 12px
   &-btn
-    width: 100%
-    height: 59px
+    width: 100% !important
+    height: 59px !important
 
 .biography
   ul
@@ -348,6 +432,80 @@
     display: grid
     gap: 16px 0
 
+.contacts.v-2
+  position: relative
+  overflow: hidden
+  display: grid
+  justify-items: center
+  &:before
+    content: ''
+    position: absolute
+    width: 75px
+    height: 75px
+    border: 9px solid #{var(--color-tit)}
+    border-radius: 50%
+  &:before
+    left: -38px
+    top: -34px
+    background: #{var(--color-tit)}
+
+  .subtitle
+    font-size: 16px !important
+    font-weight: 600
+    color: #{var(--color-txt)}
+    line-height: 1 !important
+    text-align: center
+
+  &__address
+    font-family: inherit !important
+
+.socials-header
+  width: 100%
+  margin-bottom: 11px
+  display: grid
+  justify-items: center
+  gap: 16px
+  &__link
+    width: 100%
+    height: auto
+    padding: 8px 33px
+    background: #{var(--background-card)}
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+    border-radius: 100px
+    display: grid
+    justify-content: start
+    align-items: end
+    align-content: center
+    grid-template-areas: 'icon name' 'icon adress'
+    gap: 5px 12px
+    line-height: 1
+  .telegram,
+  .viber
+  .socials-icon
+    width: 44px
+    height: 44px
+    grid-area: icon
+  .contacts-name
+    font-size: 16px
+    font-weight: 700
+    color: #{var(--color-tit)}
+    grid-area: name
+  .contacts-adress
+    align-self: start
+    font-weight: 500
+    color: #{var(--color-tit)}
+    grid-area: adress
+
+  .socials
+    margin-top: 7px
+    position: relative
+    top: unset
+    right: unset
+    gap: 23px
+    &__link svg
+      width: 40px
+      height: 40px
+
 .callback
   &-title
   &-form
@@ -370,6 +528,44 @@
 
   .phone
     &-input
+
+.callback-wrap
+  position: relative
+  .callback
+    margin-top: 40px
+    padding-top: 90px
+    display: grid
+    justify-items: center
+    position: relative
+    overflow: hidden
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      width: 75px
+      height: 75px
+      border: 9px solid #{var(--color-tit)}
+      border-radius: 50%
+    &:before
+      left: -38px
+      top: -34px
+      background: #{var(--color-tit)}
+    &:after
+      right: -31px
+      bottom: -48px
+    &-avatar
+      width: 122px !important
+      height: auto !important
+      border-radius: 50%
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 1
+
+    h3, h4,
+    .label-title
+      color: #{var(--color-tit)}
 
 input
   width: 100%
@@ -422,5 +618,80 @@ input
     &-active
       background: #{var(--color-tit)}
       opacity: 1
+
+
+/* store */
+.working
+  display: grid
+  align-items: center
+  justify-content: center
+  grid-auto-flow: column
+  grid-template-areas: 'title title' 'day weekends'
+  gap: 8px 45px
+  position: relative
+  overflow: hidden
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    width: 75px
+    height: 75px
+    border: 9px solid #{var(--color-tit)}
+    border-radius: 50%
+  &:before
+    left: -38px
+    top: -34px
+    background: #{var(--color-tit)}
+  &:after
+    right: -31px
+    bottom: -48px
+
+  &-title
+    font-family: 'Inter'
+    font-weight: 700
+    font-size: 18px
+    text-align: center
+    grid-area: title
+  &__day,
+  &__weekends
+    width: 100%
+    display: grid
+    justify-items: center
+    &__day
+      grid-area: day
+    &__weekends
+      grid-area: weekends
+    .day
+      font-weight: 500
+    .time
+      font-weight: 700
+      color: #{var(--color-tit)}
+
+.line-text
+  width: 100vw
+  margin: 32px -14px
+  transform: rotate(-3.87deg)
+  position: relative
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  p
+    width: 120%
+    height: 35px
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    white-space: nowrap
+    text-transform: capitalize
+    color: #{var(--color-btn)}
+    background: #{var(--background-btn)}
+    font-weight: 500
+    font-size: 17px
+
+  &.right-down
+    transform: rotate(3.87deg)
 
 
